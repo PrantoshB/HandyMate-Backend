@@ -1,5 +1,5 @@
 class Api::V1::ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :destroy]
+  before_action :set_service, only: %i[show destroy]
 
   def index
     @services = Service.all
