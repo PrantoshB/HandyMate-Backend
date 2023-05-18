@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2023-05-18
+  end_date: 2023-05-18
+  location: one
+  user: one
+  service: one
+
+two:
+  start_date: 2023-05-18
+  end_date: 2023-05-18
+  location: two
+  user: two
+  service: two
