@@ -31,13 +31,17 @@
 **[HandyMate-Backend]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
+
 This app is build with Ruby on Rails and Postgresql.
+
 ### Tech Stack <a name="tech-stack"></a>
+
 > <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
 > <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
 > <li><a href="https://www.postgresql.org/">Postgresql</a></li>
 > <li><a href="https://reactjs.org/">React</a></li>
 > <li><a href="https://redux.js.org/">Redux</a></li>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -47,7 +51,6 @@ This app is build with Ruby on Rails and Postgresql.
 - [x] Feature 3
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 
@@ -89,7 +92,8 @@ Install this project with:
   yarn install
 ```
 
-- Set up the database change the username and password of your postgres account in 
+- Set up the database change the username and password of your postgres account in
+
 ```sh
 config/database.yml
 ```
@@ -99,6 +103,7 @@ rails db:create db:migrate db:seed
 ```
 
 - Start the server
+
 ```sh
 ./bin/dev
 ```
@@ -115,8 +120,13 @@ rails db:create db:migrate db:seed
 - Twitter: [@jacinta_ngwu](https://twitter.com/jacinta_ngwu)
 - LinkedIn: [jacinta_ngwu](https://www.linkedin.com/in/jacintangwu/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+👤 **Utsargo Roy**
 
+- GitHub: [@utsargo](https://github.com/utsargo)
+- Twitter: [@royutsargo](https://twitter.com/royutsargo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -143,7 +153,6 @@ If you like this project, please give a ⭐️
 I would like to thank Microverse for providing us with reading materials that aid us during the project development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
