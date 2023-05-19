@@ -1,5 +1,4 @@
 class Api::V1::ServicesController < ApplicationController
-
   def index
     @services = Service.all
     render json: @services
@@ -16,7 +15,7 @@ class Api::V1::ServicesController < ApplicationController
       render json: @service, status: 200
     else
       render json: {
-        error: "Error creating service..."
+        error: 'Error creating service...'
       }
     end
   end

@@ -11,7 +11,7 @@ class Api::V1::LocationsController < ApplicationController
       render json: @location, status: 200
     else
       render json: {
-        error: "Error creating location..."
+        error: 'Error creating location...'
       }
     end
   end
