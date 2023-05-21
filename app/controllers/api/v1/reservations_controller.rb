@@ -9,7 +9,19 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.create(reservation_params)
+    @reservation = Reservation.new(reservation_params)
+
+    if @reservation.save
+      render json: @reservation, status: 200
+    else
+      render json: {
+        error: 'Error creating reservation...'
+      }
+    end
+  end
+
+  def reservation_params
+    params.require(:reservation).permit(:location_id, :user_id, :service_id, :start_date, :end_date)
   end
 
   def new
