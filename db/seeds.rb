@@ -8,9 +8,7 @@
 
 
 
-# end
- 
-# users = ["John", "Jane", "Jack", "Jill", "Joe", "Jenny", "Jim"]
+
 # users.each do |user|
 #     User.create(full_name: user)
 # end
