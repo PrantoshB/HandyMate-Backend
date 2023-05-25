@@ -6,28 +6,28 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-cities = ["New York", "Los Angeles", "Chicago", 
-"Houston", "Phoenix", "Philadelphia", "San Antonio"]
-cities.each do |city|
-    Location.create(name: city)
-end
+# cities = ["New York", "Los Angeles", "Chicago", 
+# "Houston", "Phoenix", "Philadelphia", "San Antonio"]
+# cities.each do |city|
+#     Location.create(name: city)
+# end
  
-users = ["John", "Jane", "Jack", "Jill", "Joe", "Jenny", "Jim"]
-users.each do |user|
-    User.create(full_name: user)
-end
+# users = ["John", "Jane", "Jack", "Jill", "Joe", "Jenny", "Jim"]
+# users.each do |user|
+#     User.create(full_name: user)
+# end
 
-services = ["Plumbing", "Electrical", "Carpentry", "Cleaning", "Painting", "Gardening", "Moving"]
-services.each do |service|
-    Service.create(name: service)
-end
+# services = ["Plumbing", "Electrical", "Carpentry", "Cleaning", "Painting", "Gardening", "Moving"]
+# services.each do |service|
+#     Service.create(name: service)
+# end
 
-reservations = [
-    {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 1, user_id: 1, service_id: 1},
-    {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 2, user_id: 2, service_id: 2},
-    {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 3, user_id: 3, service_id: 3}
-]
+# reservations = [
+#     {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 1, user_id: 1, service_id: 1},
+#     {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 2, user_id: 2, service_id: 2},
+#     {start_date: "2021-05-01", end_date: "2021-05-03", location_id: 3, user_id: 3, service_id: 3}
+# ]
 
-reservations.each do |reservation|  
-    Reservation.create(reservation)
-end
+# reservations.each do |reservation|  
+#     Reservation.create(reservation)
+# end
