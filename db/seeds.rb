@@ -9,9 +9,7 @@
 
 
 
-# users.each do |user|
-#     User.create(full_name: user)
-# end
+
 
 # services = ["Plumbing", "Electrical", "Carpentry", "Cleaning", "Painting", "Gardening", "Moving"]
 # services.each do |service|
