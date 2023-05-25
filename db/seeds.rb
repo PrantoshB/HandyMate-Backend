@@ -7,8 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# cities.each do |city|
-#     Location.create(name: city)
+
 # end
  
 # users = ["John", "Jane", "Jack", "Jill", "Joe", "Jenny", "Jim"]
