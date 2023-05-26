@@ -1,5 +1,6 @@
 class Api::V1::ServicesController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :destroy]
+  load_and_authorize_resource except: [:index, :show]
+
   def index
     @services = Service.all
     render json: @services
