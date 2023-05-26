@@ -1,8 +1,8 @@
 class Api::V1::ServicesController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @services = Service.all
-    render json: current_user
+    render json: @services
   end
 
   def show
