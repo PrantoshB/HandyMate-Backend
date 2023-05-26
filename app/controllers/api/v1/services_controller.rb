@@ -1,5 +1,6 @@
 class Api::V1::ServicesController < ApplicationController
-  load_and_authorize_resource except: [:index, :show]
+  before_action :authenticate_user!, only: [:create, :destroy]
+  before_action :set_service, only: [:show, :destroy]
 
   def index
     @services = Service.all
@@ -7,7 +8,6 @@ class Api::V1::ServicesController < ApplicationController
   end
 
   def show
-    @service = Service.find(params[:id])
     render json: @service
   end
 
@@ -32,6 +32,7 @@ class Api::V1::ServicesController < ApplicationController
 
   def set_service
     @service = Service.find(params[:id])
+    authorize! :manage, @service
   end
 
   def service_params
