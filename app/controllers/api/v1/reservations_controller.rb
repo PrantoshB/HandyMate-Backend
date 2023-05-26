@@ -1,4 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @reservations = Reservation.all
     render json: @reservations
@@ -6,6 +7,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    render json: @reservation
   end
 
   def create
