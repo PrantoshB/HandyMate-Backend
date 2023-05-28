@@ -29,4 +29,9 @@ RSpec.describe User, type: :model do
         expect(subject).to_not be_valid
     end
 
+    it "should be invalid with a password less than 6 characters" do
+        subject.password = "12345"
+        expect(subject).to_not be_valid
+    end
+
 end
