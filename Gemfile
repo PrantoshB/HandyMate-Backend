@@ -27,6 +27,10 @@ gem 'bootsnap', require: false
 
 gem 'rack-cors'
 
+gem 'devise'
+gem 'devise-jwt'
+gem 'jsonapi-serializer'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
