@@ -19,4 +19,9 @@ RSpec.describe User, type: :model do
         expect(subject).to_not be_valid
     end
 
+    it "should be invalid without password" do
+        subject.password = nil
+        expect(subject).to_not be_valid
+    end
+
 end
