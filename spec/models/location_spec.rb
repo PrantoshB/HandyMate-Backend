@@ -11,4 +11,8 @@ RSpec.describe Location, type: :model do
         subject.name = nil
         expect(subject).to_not be_valid
     end
+    it "should be invalid with a name less than 3 characters" do
+        subject.name = "ab"
+        expect(subject).to_not be_valid
+    end
 end
