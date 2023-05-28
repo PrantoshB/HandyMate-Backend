@@ -14,4 +14,9 @@ RSpec.describe User, type: :model do
         expect(subject).to_not be_valid
     end
 
+    it "should be invalid without email" do
+        subject.email = nil
+        expect(subject).to_not be_valid
+    end
+
 end
