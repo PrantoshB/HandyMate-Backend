@@ -9,4 +9,9 @@ RSpec.describe User, type: :model do
         expect(subject).to be_valid
     end
 
+    it "should be invalid without a full_name" do
+        subject.full_name = nil
+        expect(subject).to_not be_valid
+    end
+
 end
