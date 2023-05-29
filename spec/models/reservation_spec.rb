@@ -11,5 +11,8 @@ RSpec.describe Reservation, type: :model do
     it "is valid with valid attributes" do
         expect(@reservation).to be_valid
     end
-
+    it "is not valid without a user_id" do
+        @reservation.user_id = nil
+        expect(@reservation).to_not be_valid
+    end
 end
