@@ -13,4 +13,9 @@ RSpec.describe Service, type: :model do
         subject.name = nil
         expect(subject).to_not be_valid
     end
+    
+    it "should be invalid without details" do
+        subject.details = nil
+        expect(subject).to_not be_valid
+    end
 end
