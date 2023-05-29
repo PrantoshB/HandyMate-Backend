@@ -21,4 +21,9 @@ RSpec.describe Reservation, type: :model do
     @reservation.service_id = nil
     expect(@reservation).to_not be_valid
   end
+
+  it "is not valid without a location_id" do
+        @reservation.location_id = nil
+        expect(@reservation).to_not be_valid
+    end
 end
