@@ -22,6 +22,7 @@ class Api::V1::ServicesController < ApplicationController
   end
 
   def destroy
+    @service = Service.find(params[:id])
     @service.destroy
     head :no_content
   end
