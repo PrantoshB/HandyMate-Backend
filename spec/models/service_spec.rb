@@ -38,4 +38,10 @@ RSpec.describe Service, type: :model do
     subject.name = 'ab'
     expect(subject).to_not be_valid
   end
+
+  it "should be invalid with a details less than 10 characters" do
+    subject.details = "123456789"
+    expect(subject).to_not be_valid
+end
+
 end
