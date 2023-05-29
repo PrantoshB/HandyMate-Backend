@@ -57,4 +57,8 @@ it "should be invalid with a price not an integer" do
   subject.price = "abc"
   expect(subject).to_not be_valid
 end
+it "should be invalid with a duration not an integer" do
+  subject.duration = "abc"
+  expect(subject).to_not be_valid
+end
 end
