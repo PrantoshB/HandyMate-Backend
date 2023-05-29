@@ -23,4 +23,9 @@ RSpec.describe Service, type: :model do
         subject.price = nil
         expect(subject).to_not be_valid
     end
+    
+    it "should be invalid without duration" do
+        subject.duration = nil
+        expect(subject).to_not be_valid
+    end
 end
