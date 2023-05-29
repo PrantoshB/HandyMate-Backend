@@ -43,5 +43,8 @@ RSpec.describe Service, type: :model do
     subject.details = "123456789"
     expect(subject).to_not be_valid
 end
-
+it "should be invalid with a price less than 0" do
+  subject.price = -1
+  expect(subject).to_not be_valid
+end
 end
