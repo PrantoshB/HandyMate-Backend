@@ -34,31 +34,34 @@ RSpec.describe Service, type: :model do
     subject.image = nil
     expect(subject).to_not be_valid
   end
+  
   it 'should be invalid with a name less than 3 characters' do
     subject.name = 'ab'
     expect(subject).to_not be_valid
   end
 
-  it "should be invalid with a details less than 10 characters" do
-    subject.details = "123456789"
+  it 'should be invalid with a details less than 10 characters' do
+    subject.details = '123456789'
     expect(subject).to_not be_valid
-end
-it "should be invalid with a price less than 0" do
-  subject.price = -1
-  expect(subject).to_not be_valid
-end
+  end
 
-it "should be invalid with a duration less than 0" do
-  subject.duration = -1
-  expect(subject).to_not be_valid
-end
+  it 'should be invalid with a price less than 0' do
+    subject.price = -1
+    expect(subject).to_not be_valid
+  end
 
-it "should be invalid with a price not an integer" do
-  subject.price = "abc"
-  expect(subject).to_not be_valid
-end
-it "should be invalid with a duration not an integer" do
-  subject.duration = "abc"
-  expect(subject).to_not be_valid
-end
+  it 'should be invalid with a duration less than 0' do
+    subject.duration = -1
+    expect(subject).to_not be_valid
+  end
+
+  it 'should be invalid with a price not an integer' do
+    subject.price = 'abc'
+    expect(subject).to_not be_valid
+  end
+
+  it 'should be invalid with a duration not an integer' do
+    subject.duration = 'abc'
+    expect(subject).to_not be_valid
+  end
 end
