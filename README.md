@@ -3,7 +3,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>HandyMate Backend 🏠️🛠️</b></h3>
+  <h1><b>HandyMate Backend 🏠️🛠️</b></h1>
 
 </div>
 
