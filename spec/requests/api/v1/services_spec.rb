@@ -7,23 +7,25 @@ RSpec.describe Api::V1::ServicesController, type: :request do
       produces 'application/json'
       response '200', 'Services found' do
         schema type: :array,
-          items: {
-            properties: {
-              id: { type: :integer },
-              name: { type: :string },
-              price: { type: :number },
-              image: { type: :string },
-              details: { type: :string },
-              duration: { type: :integer },
-              rating: { type: :number }
-            },
-            required: ['id', 'name', 'price', 'image', 'details', 'duration', 'rating']
-          }
+               items: {
+                 properties: {
+                   id: { type: :integer },
+                   name: { type: :string },
+                   price: { type: :number },
+                   image: { type: :string },
+                   details: { type: :string },
+                   duration: { type: :integer },
+                   rating: { type: :number }
+                 },
+                 required: %w[id name price image details duration rating]
+               }
 
         run_test! do
           # Create some sample services for testing
-          Service.create!(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60, rating: 4.5)
-          Service.create!(name: 'Service 2', price: 15.0, image: 'image2.jpg', details: 'Details 2', duration: 90, rating: 3.8)
+          Service.create!(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60,
+                          rating: 4.5)
+          Service.create!(name: 'Service 2', price: 15.0, image: 'image2.jpg', details: 'Details 2', duration: 90,
+                          rating: 3.8)
 
           # Make a request to retrieve all services
           get '/api/v1/services'
@@ -54,21 +56,21 @@ RSpec.describe Api::V1::ServicesController, type: :request do
           duration: { type: :integer },
           rating: { type: :number }
         },
-        required: ['name', 'price', 'image', 'details', 'duration', 'rating']
+        required: %w[name price image details duration rating]
       }
 
       response '200', 'Service created' do
         schema type: :object,
-          properties: {
-            id: { type: :integer },
-            name: { type: :string },
-            price: { type: :number },
-            image: { type: :string },
-            details: { type: :string },
-            duration: { type: :integer },
-            rating: { type: :number }
-          },
-          required: ['id', 'name', 'price', 'image', 'details', 'duration', 'rating']
+               properties: {
+                 id: { type: :integer },
+                 name: { type: :string },
+                 price: { type: :number },
+                 image: { type: :string },
+                 details: { type: :string },
+                 duration: { type: :integer },
+                 rating: { type: :number }
+               },
+               required: %w[id name price image details duration rating]
 
         let(:service) do
           {
@@ -83,7 +85,7 @@ RSpec.describe Api::V1::ServicesController, type: :request do
 
         run_test! do
           # Make a request to create a service
-          post '/api/v1/services', params: { service: service }
+          post '/api/v1/services', params: { service: }
 
           # Assert the response status code
           expect(response).to have_http_status(:ok)
@@ -96,16 +98,16 @@ RSpec.describe Api::V1::ServicesController, type: :request do
 
       response '200', 'Error creating service' do
         schema type: :object,
-          properties: {
-            error: { type: :string }
-          },
-          required: ['error']
+               properties: {
+                 error: { type: :string }
+               },
+               required: ['error']
 
         let(:service) { { name: 'Invalid Service', price: 'invalid' } }
 
         run_test! do
           # Make a request to create a service with invalid data
-          post '/api/v1/services', params: { service: service }
+          post '/api/v1/services', params: { service: }
 
           # Assert the response status code
           expect(response).to have_http_status(:ok)
@@ -126,18 +128,21 @@ RSpec.describe Api::V1::ServicesController, type: :request do
       produces 'application/json'
       response '200', 'Service found' do
         schema type: :object,
-          properties: {
-            id: { type: :integer },
-            name: { type: :string },
-            price: { type: :number },
-            image: { type: :string },
-            details: { type: :string },
-            duration: { type: :integer },
-            rating: { type: :number }
-          },
-          required: ['id', 'name', 'price', 'image', 'details', 'duration', 'rating']
+               properties: {
+                 id: { type: :integer },
+                 name: { type: :string },
+                 price: { type: :number },
+                 image: { type: :string },
+                 details: { type: :string },
+                 duration: { type: :integer },
+                 rating: { type: :number }
+               },
+               required: %w[id name price image details duration rating]
 
-        let(:id) { Service.create(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60, rating: 4.5).id }
+        let(:id) do
+          Service.create(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60,
+                         rating: 4.5).id
+        end
 
         run_test! do
           # Make a request to retrieve a service
@@ -154,10 +159,10 @@ RSpec.describe Api::V1::ServicesController, type: :request do
 
       response '404', 'Service not found' do
         schema type: :object,
-          properties: {
-            error: { type: :string }
-          },
-          required: ['error']
+               properties: {
+                 error: { type: :string }
+               },
+               required: ['error']
 
         let(:id) { 999 }
 
@@ -179,7 +184,10 @@ RSpec.describe Api::V1::ServicesController, type: :request do
       tags 'Services'
       produces 'application/json'
       response '204', 'Service deleted' do
-        let(:id) { Service.create(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60, rating: 4.5).id }
+        let(:id) do
+          Service.create(name: 'Service 1', price: 10.0, image: 'image1.jpg', details: 'Details 1', duration: 60,
+                         rating: 4.5).id
+        end
 
         run_test! do
           # Make a request to delete a service
@@ -189,16 +197,16 @@ RSpec.describe Api::V1::ServicesController, type: :request do
           expect(response).to have_http_status(:no_content)
 
           # Assert that the service is deleted
-          expect(Service.find_by(id: id)).to be_nil
+          expect(Service.find_by(id:)).to be_nil
         end
       end
 
       response '404', 'Service not found' do
         schema type: :object,
-          properties: {
-            error: { type: :string }
-          },
-          required: ['error']
+               properties: {
+                 error: { type: :string }
+               },
+               required: ['error']
 
         let(:id) { 999 }
 
