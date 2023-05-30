@@ -3,7 +3,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>HandyMate Backend</b></h3>
+  <h3><b>HandyMate Backend 🏠️🛠️</b></h3>
 
 </div>
 
@@ -68,6 +68,16 @@ In order to run this project you need:
 - Install Postgresql
 - Install yarn
 - Understanding of Ruby
+
+### App Screenshot
+![screenshot](https://github.com/PrantoshB/HandyMate-Backend/blob/dev/screenshot.jpg)
+
+### Front-end Repository
+- Here is the link of the [Front-End](https://github.com/PrantoshB/HandyMate-Frontend)
+
+### Initial State of Kanban Board
+![kanban](https://user-images.githubusercontent.com/6623974/238977867-a2ed06f6-9726-4986-8cd5-add65c82d7d2.png)
+
 
 ### Setup
 
