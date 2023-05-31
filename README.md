@@ -130,7 +130,7 @@ rspec ./spec/models
 
 ### :notebook: API Documentation <a name="api-docs"></a>
 
-- Run the server with `rails s' command
+- Run the server with `rails s` command
 - The open https://localhost:3000/api-docs in your browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
