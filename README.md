@@ -18,6 +18,7 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+- [:notebook: API Documentation](#api-docs)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -26,7 +27,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 HandyMate-Backendt <a name="about-project"></a> <a name="about-project"></a>
+# 📖 HandyMate-Backend <a name="about-project"></a> <a name="about-project"></a>
 
 **HandyMate Backend** is a Rails project which gives the API for the HandyMate Frontend.
 
@@ -70,14 +71,16 @@ In order to run this project you need:
 - Understanding of Ruby
 
 ### App Screenshot
+
 ![screenshot](https://github.com/PrantoshB/HandyMate-Backend/blob/dev/screenshot.jpg)
 
 ### Front-end Repository
+
 - Here is the link of the [Front-End](https://github.com/PrantoshB/HandyMate-Frontend)
 
 ### Initial State of Kanban Board
-![kanban](https://user-images.githubusercontent.com/6623974/238977867-a2ed06f6-9726-4986-8cd5-add65c82d7d2.png)
 
+![kanban](https://user-images.githubusercontent.com/6623974/238977867-a2ed06f6-9726-4986-8cd5-add65c82d7d2.png)
 
 ### Setup
 
@@ -117,18 +120,29 @@ rails db:create db:migrate db:seed
 rails s
 ```
 
+- Run the tests
+
+```sh
+rspec ./spec/models
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### :notebook: API Documentation <a name="api-docs"></a>
+
+- Run the server with `rails s' command
+- The open https://localhost:3000/api-docs in your browser.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **Yetemegn Lemma**
 
 - GitHub: [@githubhandle](https://github.com/yetemegn-telaye)
 - Twitter: [@twitterhandle](https://twitter.com/Yetemegn19)
-- LinkedIn: [LinkedIn](* lemma19yet@gmail.com)
+- LinkedIn: [LinkedIn](\* lemma19yet@gmail.com)
 
 👤 **Jacinta Ngwu**
 
@@ -153,7 +167,6 @@ rails s
 - GitHub: [@PrantoshB](https://github.com/PrantoshB)
 - Twitter: [@prantalks](https://twitter.com/prantalks)
 - LinkedIn: [Prantosh Biswas](https://linkedin.com/in/prantosh)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,6 +199,7 @@ If you like this project, please give a ⭐️
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank:
+
 - [Murat Korkmaz](https://www.behance.net/muratk) for a beautiful, efficient, and accessible user interface [Design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
