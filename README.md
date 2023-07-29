@@ -2,7 +2,6 @@
 
 <div align="center">
   <br/>
-
   <h1><b>HandyMate Backend 🏠️🛠️</b></h1>
 
 </div>
